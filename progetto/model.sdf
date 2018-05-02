@@ -4779,7 +4779,7 @@
         </ode>
       </physics>
     </joint>
-    <joint name='link_0_2_JOINT_4' type='revolute'>
+    <joint name='left_joint' type='revolute'>
       <parent>link_0_2</parent>
       <child>link_9</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
@@ -4812,7 +4812,7 @@
         </ode>
       </physics>
     </joint>
-    <joint name='link_0_2_clone_JOINT_6' type='revolute'>
+    <joint name='right_joint' type='revolute'>
       <parent>link_0_2_clone</parent>
       <child>link_9_clone</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
@@ -6072,8 +6072,8 @@
 <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
  <alwaysOn>true</alwaysOn>
  <updateRate>20</updateRate>
- <rightJoint>link_0_2_clone_JOINT_6</rightJoint>
- <leftJoint>link_0_2_JOINT_4</leftJoint>
+ <rightJoint>right_joint</rightJoint>
+ <leftJoint>left_joint</leftJoint>
  <!--<wheelSeparation>0.4</wheelSeparation>-->
  <wheelDiameter>0.2</wheelDiameter>
  <torque>5</torque>
