@@ -1,0 +1,13 @@
+<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+ <alwaysOn>true</alwaysOn>
+ <updateRate>20</updateRate>
+ <leftJoint>link_0_2_clone_JOINT_6</leftJoint>
+ <rightJoint>link_0_2_JOINT_4</rightJoint>
+ <!--<wheelSeparation>0.4</wheelSeparation>-->
+ <wheelDiameter>0.2</wheelDiameter>
+ <torque>20</torque>
+ <commandTopic>/turtle1/cmd_vel</commandTopic>
+ <odometryTopic>odom</odometryTopic>
+ <odometryFrame>odom</odometryFrame>
+ <robotBaseFrame>base_footprint</robotBaseFrame>
+</plugin>
