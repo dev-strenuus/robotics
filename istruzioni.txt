@@ -1,3 +1,5 @@
+unset GAZEBO_PLUGIN_PATH
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/model_editor_models/progetto/build
 roscore
 rosrun gazebo_ros gzserver -u --verbose
 rosrun gazebo_ros gzclient --verbose
