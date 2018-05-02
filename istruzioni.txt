@@ -1,3 +1,4 @@
 roscore
 rosrun gazebo_ros gzserver -u --verbose
 rosrun gazebo_ros gzclient --verbose
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
