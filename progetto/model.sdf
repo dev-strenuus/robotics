@@ -6082,6 +6082,7 @@
  <odometryFrame>odom</odometryFrame>
  <robotBaseFrame>base_footprint</robotBaseFrame>
 </plugin>
+<plugin name="vel" filename="libvel.so"/>
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
   </model>
