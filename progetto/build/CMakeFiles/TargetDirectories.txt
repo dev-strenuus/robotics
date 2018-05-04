@@ -1,3 +1,0 @@
-/root/model_editor_models/progetto/build/CMakeFiles/edit_cache.dir
-/root/model_editor_models/progetto/build/CMakeFiles/rebuild_cache.dir
-/root/model_editor_models/progetto/build/CMakeFiles/vel.dir

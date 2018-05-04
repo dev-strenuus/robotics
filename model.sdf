@@ -5112,7 +5112,7 @@
         </surface>
       </collision>
     </link>
-    <joint name='left_joint' type='revolute'>
+    <joint name='right_joint' type='revolute'>
       <parent>link_0_2</parent>
       <child>link_9</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
@@ -6760,7 +6760,7 @@
         </ode>
       </physics>
     </joint>
-    <joint name='right_joint' type='revolute'>
+    <joint name='left_joint' type='revolute'>
       <parent>link_0_2_clone</parent>
       <child>link_9_clone</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
@@ -6793,6 +6793,20 @@
         </ode>
       </physics>
     </joint>
+<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+ <alwaysOn>true</alwaysOn>
+ <updateRate>200</updateRate>
+ <rightJoint>left_joint</rightJoint>
+ <leftJoint>right_joint</leftJoint>
+ <wheelSeparation>0.546</wheelSeparation>
+ <wheelDiameter>0.2</wheelDiameter>
+ <torque>5</torque>
+ <commandTopic>/cmd_vel</commandTopic>
+ <odometryTopic>odom</odometryTopic>
+ <odometryFrame>odom</odometryFrame>
+ <robotBaseFrame>base_footprint</robotBaseFrame>
+</plugin>
+<plugin name="vel" filename="libvel.so"/>
     <static>0</static>
     <allow_auto_disable>1</allow_auto_disable>
   </model>
