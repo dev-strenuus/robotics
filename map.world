@@ -72,12 +72,11 @@ window
 # load an environment bitmap
 floorplan
 ( 
-  name "map"
-  bitmap "map.pgm"
+  name "map2"
+  bitmap "map2.pgm"
   size [200.0 200.0 0.0]
   pose [ -100.0 -100.0 0.0 0.0]
 )
 
 # throw in a robot
-erratic( pose [ -80.0 -145.0 0.0 0.0 ] name "era" color "blue")
-block( pose [ -13.924 25.020 0.000 180.000 ] color "red")
+erratic( pose [ -100.0 -100.0 0.0 0.0 ] name "era" color "blue")
