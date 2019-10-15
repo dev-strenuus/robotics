@@ -1,0 +1,53 @@
+- Developers
+
+ Scotti Andrea 846630 
+ Stucchi Gabriele 847482 
+
+- Setup steps (to be sure remember to run source ~/.bashrc in every terminal)
+
+0) copy slam folder in home
+1) open terminal and then cd
+2) nano .bashrc
+3) in fondo al file aggiungere: source ~/slam/devel/setup.bash
+4) cd slam
+5) catkin_make
+6) source ~/.bashrc
+
+- Test on odometry (remember to run roscore)
+
+0) Open a terminal and: rosparam  set use_sim_time true
+1) Go to the folder containing bags
+2) rosbag play --clock first_bag.bag
+3) Open a terminal and: source ~/.bashrc and then roslaunch project2 launcher.launch
+
+Now our node is computing odometry by publishing the custom message in the topic /odometry1 (the messages are published only if the robot is moving, because they're published when the robot receives message from encoders).
+It's also publishing in /odom for navigation and in /testOdometry to visualize the pose in rviz.
+
+By default it's computing odometry by reading velocities from encoders.
+In order to change the source you should type in a new terminal: rosparam set /odometry/source imu .
+To come back with encoders as source type: rosparam set /odometry/source encoders .
+
+In order to visualize our published tf transformation run in another terminal: rosrun rqt_tf_tree rqt_tf_tree.
+
+- Gmapping
+
+0) Open a terminal and: rosparam  set use_sim_time true
+1) rosrun gmapping slam_gmapping scan:=/scan _base_frame:=base_footprint
+2) Go to the folder containing bags
+3) rosbag play --clock corridor_short.bag
+4) Open a terminal and: roslaunch project2 launcher.launch
+5) When the bag is finished: rosrun map_server map_saver -f map
+
+We saved our map in ~/slam/src/stage_ros/world
+
+- Localization (not working very well)
+
+0) Open a terminal and: rosparam  set use_sim_time true
+1) Go to the folder containing bags
+2) rosbag play --clock second_bag.bag
+3) Open a terminal and: roslaunch project2 launcher.launch
+4) Open anoter terminal and: cd ~/slam/src/stage_ros/world
+5) rosrun stage_ros stageros map.world (you should move and zoom to find the piece of map of interest).
+
+
+

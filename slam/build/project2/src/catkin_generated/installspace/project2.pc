@@ -1,0 +1,8 @@
+prefix=/home/gabriele/slam/install
+
+Name: project2
+Description: Description of project2
+Version: 0.0.0
+Cflags: -I/home/gabriele/slam/install/include
+Libs: -L/home/gabriele/slam/install/lib 
+Requires: message_runtime

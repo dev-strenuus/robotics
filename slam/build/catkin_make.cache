@@ -1,0 +1,2 @@
+project2/src:stage_ros
+-DCATKIN_DEVEL_PREFIX=/home/gabriele/slam/devel -DCMAKE_INSTALL_PREFIX=/home/gabriele/slam/install -G Unix Makefiles

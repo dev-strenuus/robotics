@@ -1,0 +1,8 @@
+prefix=/home/gabriele/slam/devel
+
+Name: stage_ros
+Description: Description of stage_ros
+Version: 1.8.0
+Cflags: 
+Libs: -L/home/gabriele/slam/devel/lib 
+Requires: 

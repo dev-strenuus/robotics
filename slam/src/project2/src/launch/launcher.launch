@@ -1,0 +1,6 @@
+<launch>
+	<node pkg="project2" type="odometry" name="odometry" output="screen">
+		<param name="source" value="encoders" type="string"/>
+	</node>
+	<node pkg="tf" type="static_transform_publisher" name="odometry_center" args="0.17 0 -0.034 0 0 0 1 base_footprint base_link 100" />
+</launch>
